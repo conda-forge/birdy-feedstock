@@ -1,12 +1,12 @@
 {% set name = "birdy" %}
-{% set version = "v0.6.5" %}
+{% set version = "0.6.5" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: v{{ version }}
 
 source:
-  url: https://github.com/bird-house/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://github.com/bird-house/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: ece0aa45130b874ec623b763027e1ee5da125fdbf83a30cdb622ed1d9facd1be
 
 build:
