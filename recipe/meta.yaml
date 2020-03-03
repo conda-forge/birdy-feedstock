@@ -1,5 +1,5 @@
 {% set name = "birdy" %}
-{% set version = "0.6.5" %}
+{% set version = "0.6.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/bird-house/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: ece0aa45130b874ec623b763027e1ee5da125fdbf83a30cdb622ed1d9facd1be
+  sha256: fe1be67a536d7c24f2710b8c2f0d7b5977e96c91cd50f9fe7a9cdc9979ca459d
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - birdy = birdy.cli.run:cli
 
@@ -49,7 +49,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE.txt
-  summary: 'Birdy provides a command-line tool to work with Web Processing Services (WPS).'
+  summary: Birdy provides a command-line tool to work with Web Processing Services (WPS).
 
   description: |
     Birdy is a Python command-line tool to work with Web Processing Services (WPS).
