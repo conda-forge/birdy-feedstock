@@ -1,5 +1,5 @@
 {% set name = "birdy" %}
-{% set version = "0.6.7" %}
+{% set version = "0.6.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/bird-house/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: b8bda3b188139ff7d53603bba8091f6c1a57d4aaf06256ddff0df7d04fb6b368
+  sha256: 43c81f479d6a6ca8b16c3255114f28d2722fd378fbf3fc24f8db579d27d38cc0
 
 build:
   noarch: python
