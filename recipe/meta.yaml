@@ -18,27 +18,19 @@ build:
 
 requirements:
   host:
-    - python >=3
+    - python
     - pip
-    - setuptools
-    - six
-    - click
-    - lxml
-    - owslib >=0.18.0
-    - jinja2
-    - wrapt
-    - funcsigs
-    - boltons
   run:
-    - python >=3
-    - six
+    - python >=3.6
     - click
     - lxml
-    - owslib >=0.18.0
+    - owslib >=0.21
     - jinja2
     - wrapt
     - funcsigs
     - boltons
+    - python-dateutil >=2.8.1
+    - requests >=2.0
 
 test:
   imports:
