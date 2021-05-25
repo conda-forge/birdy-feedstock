@@ -23,6 +23,7 @@ requirements:
   run:
     - python >=3.6
     - click
+    - ipython
     - lxml
     - owslib >=0.21
     - jinja2
