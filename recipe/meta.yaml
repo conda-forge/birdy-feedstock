@@ -6,12 +6,12 @@ package:
   version: v{{ version }}
 
 source:
-  url: https://github.com/bird-house/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 6f3b1a4f31d6ca036d09a8e724d5d6b079231e91b63e94f022f9f8d0c8662607
+  url: https://pypi.io/packages/source/b/birdhouse-birdy/birdhouse-birdy-{{ version }}.tar.gz
+  sha256: 1ed6f3334af83d737d3386559c4b35a7d3c25e3ad5c25aeeb3fc75b7548652f8
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - birdy = birdy.cli.run:cli
