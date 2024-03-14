@@ -46,7 +46,7 @@ test:
     - tests
   commands:
     - pip check
-    - pytest
+    - pytest -m "not online"
 
 about:
   home: http://github.com/bird-house/birdy
