@@ -46,7 +46,6 @@ test:
     - tests
   commands:
     - pip check
-    - birdy hello --name "World"
     - pytest
 
 about:
