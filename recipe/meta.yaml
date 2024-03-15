@@ -1,5 +1,5 @@
 {% set name = "birdy" %}
-{% set version = "0.8.4" %}
+{% set version = "0.8.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/birdhouse-birdy/birdhouse-birdy-{{ version }}.tar.gz
-  sha256: 7d951aa81e820e6eb42170e869f00f14ace034923a09f9f531e37ec49f8afd76
+  sha256: 4013a64eba606f50186976803ae585d784093148a8988238e135e9afcad68620
 
 build:
   noarch: python
@@ -18,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.9
     - pip
   run:
-    - python >=3.6
+    - python >=3.9
     - boltons
     - click
     - funcsigs
@@ -30,6 +30,7 @@ requirements:
     - lxml
     - owslib >=0.21
     - packaging
+    - pyopenssl
     - python-dateutil >=2.8.1
     - requests >=2.0
     - wrapt
@@ -37,6 +38,15 @@ requirements:
 test:
   imports:
     - birdy
+  requires:
+    - pip
+    - pytest
+  source_files:
+    - birdy
+    - tests
+  commands:
+    - pip check
+#    - pytest -m "not online"  # Package is missing some key files for proper testing. See: https://github.com/bird-house/birdy/pull/245
 
 about:
   home: http://github.com/bird-house/birdy
