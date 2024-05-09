@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/b/birdhouse-{{ name }}/birdhouse-{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/birdhouse-{{ name }}/birdhouse_{{ name }}-{{ version }}.tar.gz
   sha256: 10d90a7584d0ef8d355b6114d15937bff4a9c446db3f30be26f5187a9eccdad0
 
 build:
