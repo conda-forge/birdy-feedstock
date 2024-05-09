@@ -41,6 +41,7 @@ test:
   requires:
     - pip
     - pytest
+    - xarray
   source_files:
     - birdy
     - tests
@@ -59,7 +60,7 @@ about:
     It is built with the capabilities of OWSLib from the GeoPython project and allows
     for ease in the development of WPS-enabled services as part of the Bird-house ecosystem.
   doc_url: https://birdy.readthedocs.io/en/stable/
-  dev_url: http://github.com/bird-house/birdy
+  dev_url: https://github.com/bird-house/birdy
 
 extra:
   recipe-maintainers:
