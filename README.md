@@ -3,7 +3,7 @@ About birdy-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/birdy-feedstock/blob/main/LICENSE.txt)
 
-Home: http://github.com/bird-house/birdy
+Home: https://github.com/bird-house/birdy
 
 Package license: Apache-2.0
 
