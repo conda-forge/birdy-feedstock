@@ -6,22 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/birdhouse-{{ name }}/birdhouse_{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/birdhouse-{{ name }}/birdhouse_{{ name }}-{{ version }}.tar.gz
   sha256: 10d90a7584d0ef8d355b6114d15937bff4a9c446db3f30be26f5187a9eccdad0
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - birdy = birdy.cli.run:cli
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - boltons
     - click
     - funcsigs
@@ -42,6 +43,7 @@ test:
     - pip
     - pytest
     - xarray
+    - python {{ python_min }}
   source_files:
     - birdy
     - setup.cfg

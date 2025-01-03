@@ -9,7 +9,7 @@ Package license: Apache-2.0
 
 Summary: Birdy provides a command-line tool to work with Web Processing Services (WPS).
 
-Development: http://github.com/bird-house/birdy
+Development: https://github.com/bird-house/birdy
 
 Documentation: https://birdy.readthedocs.io/en/stable/
 
