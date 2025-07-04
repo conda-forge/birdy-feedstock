@@ -23,19 +23,19 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - boltons
-    - click
-    - funcsigs
-    - ipython
-    - jinja2
-    - lxml
+    - boltons >=23.0
+    - click >=8.1.0
+    - jinja2 >=3.0.0
+    - lxml >=5.0.0
     - owslib >=0.21
-    - packaging
-    - pyopenssl
+    - packaging >=23.0
+    - pyopenssl >=23.0
     - python-dateutil >=2.8.1
     - requests >=2.24.0
     - urllib3 >=2.0.2
     - wrapt >=1.14.0
+run_constrained:
+    - ipython >8.5.0,!=9.0.0
 
 test:
   imports:
