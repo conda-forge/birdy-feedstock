@@ -1,13 +1,13 @@
 {% set name = "birdy" %}
-{% set version = "0.9.1" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/birdhouse-{{ name }}/birdhouse_{{ name }}-{{ version }}.tar.gz
-  sha256: 2cd9fcc96fb92545015c7754a609e1e8fb66c759eb2348b38ce84cee4ec9e364
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/birdhouse-{{ name }}/birdhouse_{{ name }}-{{ version }}.tar.gz
+  sha256: 535b64396f1f8b6d1bbdea04f9e591d5bb3e9bcf73a267e1a76ae6ed59cfe1f5
 
 build:
   noarch: python
