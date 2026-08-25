@@ -70,7 +70,7 @@ tests:
       - birdy --help
 
 about:
-  home: https://github.com/bird-house/birdy
+  homepage: https://github.com/bird-house/birdy
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE.txt
