@@ -45,7 +45,7 @@ requirements:
     - pymetalink >=6.5.3
     - xarray >=2023.1.0
 
-test:
+tests:
   - python:
       imports:
         - birdy
