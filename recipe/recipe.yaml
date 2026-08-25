@@ -52,7 +52,7 @@ tests:
   - python:
       imports:
         - birdy
-      pip check: true
+      pip_check: true
       python_version:
          - ${{ python_min }}.*
          - "*"
