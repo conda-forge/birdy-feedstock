@@ -41,7 +41,7 @@ requirements:
     - requests >=2.24.0
     - urllib3 >=2.6.0
     - wrapt >=1.14.0
-  run_constrained:
+  run_constraints:
     - gdal >=3.5
     - ipython >8.5.0,!=9.0.0
     - netCDF4 >=1.6.0
