@@ -73,7 +73,7 @@ about:
   homepage: https://github.com/bird-house/birdy
   license: Apache-2.0
   license_family: Apache
-  license_file: LICENSE.txt
+  license_file: LICENSE
   summary: Birdy provides a command-line tool to work with Web Processing Services (WPS).
   description: |
     Birdy is a Python command-line tool to work with Web Processing Services (WPS).
