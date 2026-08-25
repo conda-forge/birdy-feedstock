@@ -1,6 +1,9 @@
 schema_version: 1
 
 context:
+  name: birdy
+  python_name: birdhouse_birdy
+  python_min: "3.11"
   version: "0.10.0"
 
 package:
@@ -50,18 +53,17 @@ tests:
       imports:
         - birdy
       pip check: true
-      python_version: ${{ python_min }}.*
+      python_version: ["${{ python_min ~ '.*' }}", "3.14.*"]
   - requirements:
       run:
-        - pip >=25.2
         - pytest >=9.0.2
         - python ${{ python_min }}.*
         - xarray >=2023.1.0
     files:
-      - pyproject.toml
-      - tests
+      source: 
+        - pyproject.toml
+        - tests
     script:
-      - pip check
       - pytest -m "not online"
       - birdy --help
 
