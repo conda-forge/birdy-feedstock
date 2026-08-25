@@ -9,14 +9,11 @@ Package license: Apache-2.0
 
 Summary: Birdy provides a command-line tool to work with Web Processing Services (WPS).
 
-Development: https://github.com/bird-house/birdy
-
 Documentation: https://birdy.readthedocs.io/en/stable/
 
 Birdy is a Python command-line tool to work with Web Processing Services (WPS).
 It is built with the capabilities of OWSLib from the GeoPython project and allows
 for ease in the development of WPS-enabled services as part of the Bird-house ecosystem.
-
 
 Current build status
 ====================
