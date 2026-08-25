@@ -1,29 +1,31 @@
-{% set name = "birdy" %}
-{% set version = "0.10.0" %}
-{% set python_min = "3.11" %}
+schema_version: 1
+
+context:
+  version: "0.10.0"
 
 package:
-  name: {{ name|lower }}
+  name: birdy
   version: {{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/birdhouse-{{ name }}/birdhouse_{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/b/birdhouse-birdy/birdhouse_birdy-${{ version }}.tar.gz
   sha256: 535b64396f1f8b6d1bbdea04f9e591d5bb3e9bcf73a267e1a76ae6ed59cfe1f5
 
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
-  entry_points:
-    - birdy = birdy.cli.run:cli
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - birdy = birdy.cli.run:cli
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python >=3.11.0
     - flit-core >=3.12.0,<4.0
     - pip >=25.2
   run:
-    - python >={{ python_min }}
+    - python >=3.11.0
     - boltons >=23.0
     - click >=8.1.0
     - cryptography >=46.0.5
@@ -44,20 +46,24 @@ requirements:
     - xarray >=2023.1.0
 
 test:
-  imports:
-    - birdy
-  requires:
-    - pip >=25.2
-    - pytest >=9.0.2
-    - xarray >=2023.1.0
-    - python {{ python_min }}
-  source_files:
-    - birdy
-    - pyproject.toml
-    - tests
-  commands:
-    - pip check
-    - pytest -m "not online"
+  - python:
+      imports:
+        - birdy
+      pip check: true
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip >=25.2
+        - pytest >=9.0.2
+        - python ${{ python_min }}.*
+        - xarray >=2023.1.0
+    files:
+      - pyproject.toml
+      - tests
+    script:
+      - pip check
+      - pytest -m "not online"
+      - birdy --help
 
 about:
   home: https://github.com/bird-house/birdy
