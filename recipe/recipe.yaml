@@ -8,7 +8,7 @@ context:
 
 package:
   name: birdy
-  version: "0.10.0"
+  version: ${{ version }}
 
 source:
   url: https://pypi.org/packages/source/b/birdhouse-birdy/birdhouse_birdy-${{ version }}.tar.gz
